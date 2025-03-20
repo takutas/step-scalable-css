@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* ------------------------------------------------------------
+
+Reset
+
+------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+img {
+  vertical-align: top;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #333;
+}
+
+/* ------------------------------------------------------------
+
+Base
+
+------------------------------------------------------------ */
+:root {
+  --scrollbar: 17px;
+}
+
+html {
+  /*--基準--1対1でスケール*/
+  font-size: calc((100vw - var(--scrollbar)) / 1440 * 10 / 1920 * 1620);
+}
+@media print {
+  html {
+    font-size: calc((100vw - var(--scrollbar)) / 1440 * 10);
+  }
+}
+@media screen and (max-width: 1920px) {
+  html {
+    /*--ブレイクポイント1920px--固定*/
+    font-size: calc(62.5%*1.125); 
+    /* 1.125=1620/1440 */
+  }
+}
+@media screen and (max-width: 1620px) {
+  html {
+    /*--ブレイクポイント1620px--1対1でスケール*/
+    font-size: calc((100vw - var(--scrollbar)) / 1440 * 10);
+  }
+}
+@media screen and (max-width: 1440px) {
+  html {
+    /*--ブレイクポイント1440px--固定*/
+    font-size: 62.5%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  html {
+    /*--ブレイクポイント1200px--1対1でスケール*/
+    font-size: calc(100vw/1200*10);
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 767px) {
+  html {
+    /*--ブレイクポイント767px--1対1でスケール*/
+    font-size: calc(100vw/375*10);
+  }
+}
