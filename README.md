@@ -1,2 +1,2 @@
-# -my-css-framework
-A lightweight and scalable CSS framework optimized for responsive liquid layouts. 最新のレスポンシブデザインに最適化された軽量なCSSフレームワーク。
+スケール+リキッドレイアウトを段階的に組み合わせることで、
+一般的なデザインデータPC,SPの実装を効率的かつ一貫性のあるデザインを保つベースCSS
